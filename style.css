@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 6vh;
+}
+
+
+.scores {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.7rem;
+    gap: 3rem;
+    font-weight: 600;
+}
+
+.scores > * {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.func_button {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.func_button > button {
+    height: 6vh;
+    width: fit-content;
+    padding: 0 1vw 0 1vw;
+    background-color: rgb(85, 92, 170);
+    border-radius: 10px;
+    color: white;
+    font-size:1.5rem;
+}
+
+.game {
+    background-color: rgb(193, 202, 207);
+    display: grid;
+    height: 550px;
+    width: 550px;
+    border: 1px solid black;
+    grid-template-columns: repeat(15, 1fr);
+}
+
+.cell {
+    border: 1px solid rgb(105, 110, 139);
+    transition: background-color 100ms ease-in-out;
+}
+
+.snake_cell {
+    background-color: green;
+}
+
+.food_cell {
+    background-color: red;
+}
