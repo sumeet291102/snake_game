@@ -20,8 +20,6 @@ const Game = (props) => {
 
     const [food, set_food] = useState(175);
 
-    // ------------------------------------------------------------------------------------------------------------------
-
     const [start, set_start] = useState(false);
     const [score, set_score] = useState(0);
     const [high_score, set_high_score] = useState(0);
@@ -46,6 +44,7 @@ const Game = (props) => {
         set_snake_body([]);
         set_snake_st(new Set());
         set_high_score(Math.max(score,high_score));
+        set_start(false);
         set_score(0);
     }
 
@@ -75,6 +74,7 @@ const Game = (props) => {
                     set_snake_body([]);
                     set_snake_st(new Set());
                     set_high_score(Math.max(score,high_score));
+                    set_start(false);
                     set_score(0);
                 }
     
